@@ -2,11 +2,11 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 function imgMutator2(img) {
-  if(!img) return img;
+  if (!img) return img;
   let imgArr = img.split("/");
   let size = imgArr[imgArr.length - 2];
   let sizeArr = size.split(",");
-  sizeArr[sizeArr.length-2] = "width-800";
+  sizeArr[sizeArr.length - 2] = "width-800";
   size = sizeArr.join(",");
   imgArr[imgArr.length - 2] = size;
   img = imgArr.join("/");
