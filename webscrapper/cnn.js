@@ -10,7 +10,7 @@ const cheerio = require("cheerio");
     let $ = cheerio.load(data);
     let news = [];
 
-    $(".stack__inner").each((i, elem) => {
+    $(".card.container__item.container__item--type-section.container_lead-plus-headlines__item.container_lead-plus-headlines__item--type-section").each((i, elem) => {
       const title = $(elem).find("a").find("span").text();
       let link = $(elem).find("a").attr("href");
       link = "https://edition.cnn.com" + link;
