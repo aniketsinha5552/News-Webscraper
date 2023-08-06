@@ -1,4 +1,4 @@
-# News Webscrapper
+# News Web scraper
  A news webscrapper to get all the latest news
 
  ## Tech : NodeJs, Express, Cheerio
