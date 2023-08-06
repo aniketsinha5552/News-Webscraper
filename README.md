@@ -7,7 +7,7 @@
 
  ## Local Setup
  - run `npm install` to install all the dependencies
- - run `npm start` to start the server
+ - run `npm start` to start the server `http://localhost:5000/`
 
 ## API Endpoints
 - GET `/news` 
