@@ -3,7 +3,7 @@
 
  ## Tech : NodeJs, Express, Cheerio
 
- ## React Native App created using this 👉🏻👉🏻 https://github.com/aniketsinha5552/NewsPiece
+ ## React Native App 👉🏻👉🏻 https://github.com/aniketsinha5552/NewsPiece
 
  ## Local Setup
  - run `npm install` to install all the dependencies
