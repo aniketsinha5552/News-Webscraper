@@ -14,15 +14,16 @@ app.listen(process.env.PORT || 5000, () => {
 });
 
 app.get("/", (req, res) => {
-   fs.readFile("./home.html", null,(err, data) => {
-      if(err) {
-         console.log(err);
-         res.send("Error");
-      }
-      res.writeHead(200, {"Content-Type": "text/html"});
-      res.write(data);
-      res.end();
-   });
+   res.send("<h1>News API</h1>");
+   // fs.readFile("./home.html", null,(err, data) => {
+   //    if(err) {
+   //       console.log(err);
+   //       res.send("Error");
+   //    }
+   //    res.writeHead(200, {"Content-Type": "text/html"});
+   //    res.write(data);
+   //    res.end();
+   // });
 });
 
 // Routes
