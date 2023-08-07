@@ -7,23 +7,28 @@ const aljazeera = require("../webscrapper/aljazeera");
 
 router.get("/toi", async (req, res) => {
   const news = await toi();
-  res.send(news);
+  if(news.length!==0) res.status(200).send(news);
+  else res.status(500).send([{title: "Error"}]);
+  
   // console.log(news)
 });
 
 router.get("/thehindu", async (req, res) => {
   const news = await thehindu();
-  res.send(news);
+  if(news.length!==0) res.status(200).send(news);
+  else res.status(500).send([{title: "Error"}]);
 });
 
 router.get("/cnn", async (req, res) => {
   const news = await cnn();
-  res.send(news);
+  if(news.length!==0) res.status(200).send(news);
+  else res.status(500).send([{title: "Error"}]);
 });
 
 router.get("/aljazeera", async (req, res) => {
   const news = await aljazeera();
-  res.send(news);
+  if(news!==0) res.status(200).send(news);
+  else res.status(500).send([{title: "Error"}]);
 });
 
 router.get("/all", async (req, res) => {
@@ -48,6 +53,7 @@ router.post("/search", async (req, res) => {
   news = news.filter((newsItem) =>
     newsItem.title.toLowerCase().includes(searchQuery)
   );
+  if(news.length===0) res.status(200).send([{title: "No results found"}])
   res.send(news);
 });
 
