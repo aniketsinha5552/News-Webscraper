@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
        </li>
        <li>
            <h4>GET /news/:source</h4>
-           <p>Get all the news from a particular source (toi/ thehindu/ cnn/ aljazeera)</p>
+           <p>Get all the news from a particular source (toi/ thehindu/ cnn/ aljazeera/indianexpress)</p>
        </li>
        <li>
            <h4>POST /news/search/:query</h4>

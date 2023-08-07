@@ -4,6 +4,7 @@ const toi = require("../webscrapper/toi");
 const thehindu = require("../webscrapper/thehindu");
 const cnn = require("../webscrapper/cnn");
 const aljazeera = require("../webscrapper/aljazeera");
+const indianexpress = require("../webscrapper/indianexpress");
 
 router.get("/toi", async (req, res) => {
   const news = await toi();
@@ -28,6 +29,12 @@ router.get("/cnn", async (req, res) => {
 router.get("/aljazeera", async (req, res) => {
   const news = await aljazeera();
   if(news!==0) res.status(200).send(news);
+  else res.status(500).send([{title: "Error"}]);
+});
+
+router.get("/indianexpress", async (req, res) => {
+  const news = await indianexpress();
+  if(news.length!==0) res.status(200).send(news);
   else res.status(500).send([{title: "Error"}]);
 });
 

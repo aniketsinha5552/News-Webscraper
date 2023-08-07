@@ -27,7 +27,7 @@ const cnn = async () => {
     }
   });
 
-  return news.slice(0, 10);
+  return news.slice(0, 15);
 };
 
 module.exports = cnn;
